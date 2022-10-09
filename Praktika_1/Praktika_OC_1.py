@@ -2,6 +2,7 @@ import json
 import os
 import zipfile
 import psutil
+import xml.etree.ElementTree as ET
 
 
 k = True
@@ -31,7 +32,9 @@ while k:
         with open("Zadanie_3.json") as f:
             print(f.read())
 
-    #elif zad == "4":
+    elif zad == "4":
+        with open("Zadanie_4.xml", "r") as xm:
+            print(xm.read())
 
     elif zad == "5":
         with open("Zadanie5.txt", "w") as f:
