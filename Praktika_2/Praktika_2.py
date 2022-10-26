@@ -5,9 +5,10 @@ hs1 = "1115dd800feaacefdf481f1f9070374a2a81e27880f187396db67958b207cbad"
 hs2 = "3a7bd3e2360a3d29eea436fcfb7e44c735d117c42d1c1835420b6b9942dd4f1b"
 hs3 = "74e1bb62f8dabb8125a58852b63bdf6eaef667cb56ac7f7cdba6d7305c50a22f"
 slovar = []#26
-ot1, ot2, ot3 = "", "", ""
+
 for i in range(97, 123):
     slovar.append(chr(i))
+
 while True:
     v = int(input("Введите кол-во потоков (1-4) : "))
     if 0<v<5 or v==8:
@@ -29,9 +30,8 @@ def zero(x, l):
                             s2 = hs2 + " = " + slovo
                             print(s2)
                         if hex_dig == hs3:
-                            s3 = hs1 + " = " + slovo
+                            s3 = hs3 + " = " + slovo
                             print(s3)
-
 
 if v == 1:
     zero(0, 26)
