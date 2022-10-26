@@ -9,9 +9,10 @@ ot1, ot2, ot3 = "", "", ""
 for i in range(97, 123):
     slovar.append(chr(i))
 while True:
-    v = int(input("Введите кол-во потоков (1-4 или 8) : "))
+    v = int(input("Введите кол-во потоков (1-4) : "))
     if 0<v<5 or v==8:
         break
+    print("Введено неверное значение!")
 def zero(x, l):
     for a1 in slovar[x:l]:
         for a2 in slovar[x:26]:
@@ -38,34 +39,21 @@ if v == 2:
     thread_1 = Thread(target=zero, args=(0,13))
     thread_2 = Thread(target=zero, args=(13, 26))
     thread_1.start()
-    #thread_1.join()
     thread_2.start()
-    #thread_2.join()
 if v == 3:
     thread_1 = Thread(target=zero, args=(0,9))
     thread_2 = Thread(target=zero, args=(9,18))
     thread_3 = Thread(target=zero, args=(18,26))
     thread_1.start()
-    #thread_1.join()
     thread_2.start()
-    #thread_2.join()
     thread_3.start()
-    #thread_3.join()
 if v == 4:
     thread_1 = Thread(target=zero, args=(0, 7))
     thread_2 = Thread(target=zero, args=(7, 14))
     thread_3 = Thread(target=zero, args=(14, 20))
     thread_4 = Thread(target=zero, args=(20, 26))
     thread_1.start()
-    #thread_1.join()
     thread_2.start()
-    #thread_2.join()
     thread_3.start()
-    #thread_3.join()
     thread_4.start()
-    #thread_4.join()
-"""
-3a7bd3e2360a3d29eea436fcfb7e44c735d117c42d1c1835420b6b9942dd4f1b = apple
-74e1bb62f8dabb8125a58852b63bdf6eaef667cb56ac7f7cdba6d7305c50a22f = mmmmm
-1115dd800feaacefdf481f1f9070374a2a81e27880f187396db67958b207cbad = zyzzx
-"""
+
